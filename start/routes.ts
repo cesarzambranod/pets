@@ -28,6 +28,7 @@ Route.group(() => {
   Route.resource('/pet', 'PetsController').apiOnly()
   Route.resource('/exam', 'ExamsController').apiOnly()
   Route.resource('/type_exam', 'TypeExamsController').apiOnly()
+  Route.resource('/medical_history', 'MedicalHistoriesController').apiOnly()
 }).middleware('auth')
 
 Route.post('/register', 'AuthController.register')
