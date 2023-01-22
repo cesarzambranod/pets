@@ -2,7 +2,7 @@ import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import { schema } from '@ioc:Adonis/Core/Validator'
 import Exam from 'App/Models/Exam'
 export default class ExamsController {
-  public async index(ctx: HttpContextContract) {
+  public async index() {
     return Exam.all()
   }
   public async store({ request, response }: HttpContextContract) {
