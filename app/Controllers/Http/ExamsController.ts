@@ -8,7 +8,7 @@ export default class ExamsController {
   public async store({ request, response }: HttpContextContract) {
     const examSchema = schema.create({
       name: schema.string({ trim: true }),
-      type_id: schema.number(),
+      type_exams_id: schema.number(),
     })
     const payload = await request.validate({ schema: examSchema })
     const exam = await Exam.create(payload)
@@ -22,12 +22,12 @@ export default class ExamsController {
   public async update({ params, request }: HttpContextContract) {
     const examSchema = schema.create({
       name: schema.string({ trim: true }),
-      type_id: schema.number(),
+      type_exams_id: schema.number(),
     })
     const payload = await request.validate({ schema: examSchema })
     const exam = await Exam.findOrFail(params.id)
     exam.name = payload.name
-    exam.type_id = payload.type_id
+    exam.type_exams_id = payload.type_exams_id
     return exam.save()
   }
   public async destroy({ params }: HttpContextContract) {
