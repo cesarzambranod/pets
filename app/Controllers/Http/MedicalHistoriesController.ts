@@ -3,7 +3,7 @@ import { schema } from '@ioc:Adonis/Core/Validator'
 import MedicalHistory from 'App/Models/MedicalHistory'
 
 export default class MedicalHistoriesController {
-  public async index(ctx: HttpContextContract) {
+  public async index() {
     return MedicalHistory.all()
   }
   public async store({ request, response }: HttpContextContract) {

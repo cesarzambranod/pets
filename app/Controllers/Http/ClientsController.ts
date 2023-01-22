@@ -2,7 +2,7 @@ import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import { schema } from '@ioc:Adonis/Core/Validator'
 import Client from 'App/Models/Client'
 export default class ClientsController {
-  public async index(ctx: HttpContextContract) {
+  public async index() {
     return Client.all()
   }
   public async store({ request, response }: HttpContextContract) {

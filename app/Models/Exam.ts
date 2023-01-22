@@ -7,7 +7,7 @@ export default class Exam extends BaseModel {
   public id: number
 
   @column()
-  public type_id: number
+  public type_exams_id: number
 
   @column()
   public name: string

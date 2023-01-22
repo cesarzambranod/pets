@@ -3,7 +3,7 @@ import { schema } from '@ioc:Adonis/Core/Validator'
 import Pet from 'App/Models/Pet'
 
 export default class PetsController {
-  public async index(ctx: HttpContextContract) {
+  public async index() {
     return Pet.all()
   }
   public async store({ request, response }: HttpContextContract) {

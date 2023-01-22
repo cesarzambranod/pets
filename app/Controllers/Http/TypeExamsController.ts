@@ -2,7 +2,7 @@ import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import { schema } from '@ioc:Adonis/Core/Validator'
 import TypeExam from 'App/Models/TypeExam'
 export default class TypeExamsController {
-  public async index(ctx: HttpContextContract) {
+  public async index() {
     return TypeExam.all()
   }
   public async store({ request, response }: HttpContextContract) {
