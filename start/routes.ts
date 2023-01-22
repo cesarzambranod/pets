@@ -26,6 +26,7 @@ import Route from '@ioc:Adonis/Core/Route'
 Route.group(() => {
   Route.resource('/client', 'ClientsController').apiOnly()
   Route.resource('/pet', 'PetsController').apiOnly()
+  Route.resource('/exam', 'ExamsController').apiOnly()
   Route.resource('/type_exam', 'TypeExamsController').apiOnly()
 }).middleware('auth')
 

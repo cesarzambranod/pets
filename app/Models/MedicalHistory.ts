@@ -5,6 +5,12 @@ export default class MedicalHistory extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
+  @column()
+  public description: string
+
+  @column()
+  public pets_id: Number
+
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
 

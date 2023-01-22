@@ -1,5 +1,6 @@
 import { DateTime } from 'luxon'
-import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
+import { BaseModel, column, hasMany, HasMany } from '@ioc:Adonis/Lucid/Orm'
+import MedicalHistory from './MedicalHistory'
 
 export default class Pet extends BaseModel {
   @column({ isPrimary: true })
@@ -16,4 +17,7 @@ export default class Pet extends BaseModel {
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
   public updatedAt: DateTime
+
+  @hasMany(() => MedicalHistory)
+  public medicalHistory: HasMany<typeof MedicalHistory>
 }
